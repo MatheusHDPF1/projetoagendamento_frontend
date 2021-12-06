@@ -2,6 +2,82 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container:{
+        flex:1,
+        justifyContent:'center',
+        alignItems:'center',
+        backgroundColor:"white"
+    },
+    imglogo:{
+        width:100,
+        height:100,
+    },
+    painel:{
+        width:'80%',
+        padding:10,
+        margin:20,
+        shadowColor:'black',
+        shadowOffset:{width:30, height:10},
+        shadowOpacity:0.8,
+        shadowRadius:10,
+        elevation:10,
+        backgroundColor:"white"
+    },
+    input:{
+        borderBottomColor:'#eee',
+        borderBottomWidth:1,
+        padding:5,
+        marginBottom:10,
+        fontSize:15,
+    },
+    btnlogin:{
+        padding:30,
+    },
+    txtbtnlogin:{
+        textAlign:'center',
+        color:"teal",
+    },
+    imgdoctor:{
+      width:20,
+      height:20,
+      borderRadius:10
+    },
+    descricao:{
+        fontSize:15,
+        fontWeight:'bold',
+        color:'black'
+    },
+    btnagendar:{
+        backgroundColor:'#86E06C',
+        padding:20,
+        borderRadius:50,
+        color:"black"
+    },
+    txtbtncadastrar:{
+      fontSize:20,
+        fontWeight:"bold",
+        color:"teal",
+        textTransform:"uppercase"
+    },
+    btncadastrar:{
+        //position:'absolute',
+        //bottom:100,
+        backgroundColor:'#000',
+        padding:20,
+        borderRadius:50,
+    },
+    scroll:{
+        width:"100%",
+    },
+    nomedoutor:{
+        fontSize:15,
+        fontWeight:'bold',
+        color:'black'
+    },
+    bordaicones:{
         
     },
+    titulo:{
+
+    },
+    
 })
