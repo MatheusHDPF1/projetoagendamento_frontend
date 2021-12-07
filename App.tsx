@@ -7,6 +7,9 @@ import Home from './screens/Home';
 import Login from './screens/Login';
 import Cadastro from './screens/Cadastro';
 import Agendamento from './screens/Agendamento';
+import Agendas from './screens/Agendas';
+
+
 
 const Stack = createNativeStackNavigator();
 
@@ -18,7 +21,8 @@ export default function App() {
         <Stack.Screen name ="Login" component={Login}/>
         <Stack.Screen name ="Home" component={Home}/>
         <Stack.Screen name ="Cadastrar" component={Cadastro}/>
-        <Stack.Screen name ="Agendar" component={Agendamento}/>
+        <Stack.Screen name ="Agendamento" component={Agendamento}/>
+        <Stack.Screen name = "Agendas" component={Agendas}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

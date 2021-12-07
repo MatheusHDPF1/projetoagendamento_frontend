@@ -5,22 +5,24 @@ export const styles = StyleSheet.create({
         flex:1,
         justifyContent:'center',
         alignItems:'center',
-        backgroundColor:"white"
+        backgroundColor:"#B5DBF5"
     },
     imglogo:{
-        width:100,
-        height:100,
+        width:60,
+        height:70,
+        
     },
     painel:{
         width:'80%',
         padding:10,
-        margin:20,
+        margin:19,
         shadowColor:'black',
         shadowOffset:{width:30, height:10},
         shadowOpacity:0.8,
         shadowRadius:10,
         elevation:10,
-        backgroundColor:"white"
+        backgroundColor:"white",
+        
     },
     input:{
         borderBottomColor:'#eee',
@@ -37,23 +39,30 @@ export const styles = StyleSheet.create({
         color:"teal",
     },
     imgdoctor:{
-      width:20,
-      height:20,
-      borderRadius:10
+      width:100,
+      height:100,
+      borderRadius:10,
+      margin:25,
+      shadowColor:'black',
+      shadowOffset:{width:30, height:20},
+      shadowOpacity:0.8,
+      shadowRadius:10,
     },
     descricao:{
-        fontSize:15,
+        fontSize:17,
         fontWeight:'bold',
-        color:'black'
+        color:'black',
+        paddingTop:47
     },
     btnagendar:{
         backgroundColor:'#86E06C',
         padding:20,
         borderRadius:50,
-        color:"black"
+        color:"black",
+        fontWeight:'bold',
     },
     txtbtncadastrar:{
-      fontSize:20,
+        fontSize:20,
         fontWeight:"bold",
         color:"teal",
         textTransform:"uppercase"
@@ -69,9 +78,11 @@ export const styles = StyleSheet.create({
         width:"100%",
     },
     nomedoutor:{
-        fontSize:15,
+        fontSize:17,
         fontWeight:'bold',
-        color:'black'
+        color:'black',
+       // padding:1,
+        paddingTop:30,
     },
     bordaicones:{
         
