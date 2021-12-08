@@ -9,10 +9,13 @@ import { styles } from '../css/Styles';
 let nomemedico = ""
 let horario = ""
 let dia = ""
+let idpacienteagenda = ""
 
-export default function Agendamento (){
-    
-    const[idpacienteagenda, setIdPacienteAgenda] = React.useState("");
+export default function Agendamento ({route}){
+
+    const {id} = route.params;
+
+    idpacienteagenda = id;
     const[nomemedicoagenda, setNomeMedicoAgenda] = React.useState("");
     const[horarioagenda, setHorarioAgenda] = React.useState("");
     const[diaagenda, setDiaAgenda] = React.useState("");
@@ -39,13 +42,10 @@ export default function Agendamento (){
                     horario = horarioagenda;
                     dia = diaagenda;
                     
-
-
-
                     efetuaragenda()
 
 
-                    setNomeMedicoAgenda("");
+                    setNomeMedicoAgenda("")
                     setHorarioAgenda("")
                     setDiaAgenda("")
                     
@@ -60,13 +60,14 @@ export default function Agendamento (){
 function efetuaragenda(){
     
     
-    fetch(`${server}/cadastro`,{
+    fetch(`${server}/agenda/cadastro`,{
     method:"post",
     headers:{
         accept:"application/json",
         "content-type":"application/json"
     },
     body:JSON.stringify({
+        idpaciente:idpacienteagenda,
         nomemedico:nomemedico,
         horario:horario,
         dia:dia
@@ -74,7 +75,7 @@ function efetuaragenda(){
 }).then((response)=>response.json())
 .then((resultado)=>{
     Alert.alert("Aviso",resultado.output)
-    // console.log(resultado)
+    console.log(resultado)
 }).catch((erro)=>console.error(`Erro ao executar->${erro}`))
 
 

@@ -7,6 +7,7 @@ let us = ""
 let sh = ""
 let resultado: any = []
 
+
 export default function Login({navigation}){
 
 const [ usuario, setUsuario] = React.useState("")
@@ -16,7 +17,7 @@ return(
     <View style={styles.container}>
        <Image source={require("../assets/icon.png")} style={styles.imglogo}/>
        
-        <View style={styles.painel}>
+        <View style={styles.painel2}>
            <TextInput placeholder="Usuário" style={styles.input}
            value={usuario} onChangeText={(value)=>setUsuario(value)}/>
               
@@ -51,7 +52,7 @@ function efetuarLogin(){
 
     console.log(`${us} - ${sh}`)
 
-    fetch(`${server}/login`,{
+    fetch(`${server}/paciente/login`,{
         method:"POST",
         headers:{
             accept:"application/json",
@@ -64,7 +65,7 @@ function efetuarLogin(){
     })
     .then((response)=>response.json())
     .then((rs)=>{
-        //console.log(rs);
+        //console.log(rs)
         resultado [0] = rs.output
         resultado [1] = rs.payload
         resultado [2] = rs.token

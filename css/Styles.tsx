@@ -22,6 +22,8 @@ export const styles = StyleSheet.create({
         shadowRadius:10,
         elevation:10,
         backgroundColor:"white",
+        //flexDirection:'row'
+        alignItems:"center"
         
     },
     input:{
@@ -41,25 +43,26 @@ export const styles = StyleSheet.create({
     imgdoctor:{
       width:100,
       height:100,
-      borderRadius:10,
-      margin:25,
-      shadowColor:'black',
-      shadowOffset:{width:30, height:20},
-      shadowOpacity:0.8,
-      shadowRadius:10,
+      //borderRadius:10,
+      //margin:25,
+      resizeMode:"cover",
     },
     descricao:{
         fontSize:17,
         fontWeight:'bold',
         color:'black',
-        paddingTop:47
+        paddingTop:43,
+        marginBottom:12,
+        textAlign:"center"
+
     },
     btnagendar:{
         backgroundColor:'#86E06C',
         padding:20,
-        borderRadius:50,
+        borderRadius:40,
         color:"black",
         fontWeight:'bold',
+
     },
     txtbtncadastrar:{
         fontSize:20,
@@ -83,12 +86,41 @@ export const styles = StyleSheet.create({
         color:'black',
        // padding:1,
         paddingTop:30,
+        marginBottom:2,
+        textAlign:"center"
     },
-    bordaicones:{
-        
+    icone1:{
+        flexDirection:'row',
+        paddingLeft:10
     },
     titulo:{
 
     },
+    icone2:{
+        paddingLeft:180
+    },
+    horario:{
+        fontSize:15,
+        fontWeight:'bold',
+        color:'#6B626E',
+        textAlign:"center"
+    },
+    dia:{
+      fontSize:15,
+      fontWeight:'bold',
+      color:'#D44F11',
+      textAlign:"center"
+    },
+    painel2:{
+         width:'80%',
+        padding:10,
+        margin:19,
+        shadowColor:'black',
+        shadowOffset:{width:30, height:10},
+        shadowOpacity:0.8,
+        shadowRadius:10,
+        elevation:10,
+        backgroundColor:"white",
+    }
     
 })

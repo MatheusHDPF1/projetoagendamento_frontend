@@ -1,25 +1,17 @@
 import * as React from 'react';
-import { Text } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 import { View } from 'react-native';
 import { server } from '../config/Caminho';
+import { styles } from '../css/Styles';
 
 export default function Agendas(){
-    return(
-        <View>
-            <Text>Ola você está na tela do seus agendamentos</Text>
-        </View>
+  
+    console.log(`Dados na Agendas `)
 
-    )
-}
-
-function TelaAgendas(){
-
-    console.log(`Dados na Home`)
-
-    const[lstAgendas, setLstAgendas] = React.useState([])
+    const[LstAgendas, setLstAgendas] = React.useState([])
 
     React.useEffect(()=>{
-      fetch(`${server}`,{
+      fetch(`${server}/agenda/`,{
           method:'GET',
           headers:{
               accept:'application/json',
@@ -34,4 +26,20 @@ function TelaAgendas(){
       .catch((erro)=>console.error(`Erro ao ler a api ->${erro}`))
     },[])
 
+    return(
+        <View style={styles.painel}>
+            <View>
+                {
+                  LstAgendas.map((item,index)=>(
+                    <View >
+                       <Text style={styles.nomedoutor}>Doutor: {item.nomemedico}</Text>
+                       <Text style={styles.horario}>Horario: {item.horario}</Text>
+                       <Text style={styles.dia}>Data: {item.dia}</Text>
+                    </View>
+                  ))
+                }
+              </View>
+            
+        </View>
+    )
 }

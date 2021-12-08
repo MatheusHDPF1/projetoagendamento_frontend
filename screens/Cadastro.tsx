@@ -61,7 +61,7 @@ export default function Cadastro(){
 function efetuarCadastro(){
     
     
-    fetch(`${server}/cadastro`,{
+    fetch(`${server}/paciente/cadastro`,{
     method:"post",
     headers:{
         accept:"application/json",
